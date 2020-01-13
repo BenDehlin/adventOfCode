@@ -53,5 +53,20 @@ function opCode(arr, index=0){
 let add = (num1, num2) => num1 + num2
 let multiply = (num1, num2) => num1 * num2
 
-console.log(opCode(code))
-console.log(opCode(code2))
+function opCode2(){
+  for(let i = 0; i <= 99; i++){
+    for(let j = 0; j <= 99; j++){
+    let arr2 = [...code2]
+      arr2[1] = i
+      arr2[2] = j
+      let test = opCode(arr2, 0)
+      if(test[0] === 19690720){
+        console.log(`noun: ${i} verb: ${j}`)
+      }
+    }
+  }
+}
+
+// console.log(opCode(code))
+// console.log(opCode(code2)) //152702
+opCode2(code2)
